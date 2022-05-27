@@ -1,0 +1,23 @@
+﻿@model lab8.Models.coustomer
+@{
+    ViewBag.Title = "details";
+}
+
+<h2>details</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>costomer name</th>
+            <th>is subscribed</th>
+            <th>birdthday</th>
+        </tr>
+    </thead>
+    <tbody>
+		<tr>
+
+			<td>@Model.name</td>
+			<td>@Model.issubscribed</td>
+			<td>@Model.birthday</td>
+		</tr>
+    </tbody>
+</table>

@@ -1,0 +1,29 @@
+﻿@model IEnumerable<lab8.Models.coustomer>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>costomer list</h2>
+<table class="table" >
+    <thead>
+        <tr>
+            <th>costomer</th>
+            <th>edit</th>
+            <th>delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var c in Model)
+			{
+                <tr>
+                    <td>@Html.ActionLink(c.name,"details","costomer",new { id=c.id},null)</td>
+                    <td>
+                        @Html.ActionLink("edit", "edit", "costomer", new { id=c.id},null)
+                    </td>
+					<td>
+						@Html.ActionLink("delete", "delete", "costomer", new { id = c.id }, null)
+					</td>
+                </tr>
+			}
+    </tbody>
+</table>
